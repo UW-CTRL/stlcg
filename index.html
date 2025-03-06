@@ -2,41 +2,63 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
+  <!-- Meta tags for social media banners, these should be filled in appropriately -->
   <meta name="description" content="A fast library for STL evaluation in pytorch and jax">
   <meta property="og:title" content="STLCG++"/>
   <meta property="og:description" content="A fast library for STL evaluation in pytorch and jax"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- Banner image (optimal dimensions: 1200x630) -->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- Twitter banner image (optimal dimensions: 1200x600) -->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="Signal Temporal Logic, Neuro Symbolic, Formal Methods, Robotics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>STLCG++: A Masking Approach for Differentiable Signal Temporal
-    Logic Specification</title>
+  <title>STLCG++: A Masking Approach for Differentiable Signal Temporal Logic Specification</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Custom CSS for formatting the blog post and images -->
+  <style>
+    /* Center and restrict blog post images */
+    #blog-post figure {
+      margin: 2em auto;
+      text-align: center;
+    }
+    #blog-post figure img {
+      max-width: 600px;
+      width: 80%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #blog-post ul {
+      margin-left: 2em;
+    }
+    /* Optional: Add some spacing for section headings */
+    #blog-post h1, 
+    #blog-post h2 {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    /* General container padding for blog post section */
+    #blog-post .container {
+      padding: 1em;
+    }
+  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -47,75 +69,58 @@
 </head>
 <body>
 
-
+  <!-- Header / Title Section -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">STLCG++: A Masking Approach for Differentiable Signal Temporal
-              Logic Specification</h1>
+            <h1 class="title is-1 publication-title">
+              STLCG++: A Masking Approach for Differentiable Signal Temporal Logic Specification
+            </h1>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://parvkpr.github.io/" target="_blank">Parv Kapoor</a><sup>1 2</sup>,</span>
-                <span class="author-block">
-                  <a href="https://depts.washington.edu/ctrl/people/kazuki_mizuta/" target="_blank">Kazuki Mizuta</a><sup>3</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://eskang.github.io/" target="_blank">Eunsuk Kang</a><sup>1</sup>,
-                  </span>
-                  <span class="author-block">
-                    <a href="http://faculty.washington.edu/kymleung/"_blank">Karen Leung</a><sup>3 4</sup>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>Carnegie Mellon University,  <sup>2</sup>Scaled Foundations, <sup>3</sup>University of Washington<br><sup>4</sup>NVIDIA</span>
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2501.04194" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/UW-CTRL/stljax" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2501.04194" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
+                <a href="https://parvkpr.github.io/" target="_blank">Parv Kapoor</a><sup>1 2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://depts.washington.edu/ctrl/people/kazuki_mizuta/" target="_blank">Kazuki Mizuta</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://eskang.github.io/" target="_blank">Eunsuk Kang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://faculty.washington.edu/kymleung/" target="_blank">Karen Leung</a><sup>3 4</sup>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup>Carnegie Mellon University, <sup>2</sup>Scaled Foundations, <sup>3</sup>University of Washington<br>
+                <sup>4</sup>NVIDIA
+              </span>
+            </div>
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2501.04194" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/UW-CTRL/stljax" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2501.04194" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://grid.scaledfoundations.ai/shared/0c1a5a9d-0556-4f93-a36f-fde4cffd3592" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Demo</span>
                 </a>
               </span>
             </div>
@@ -123,224 +128,203 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/output.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Efficient path replanning for satisfying STL requirements using STLCG++ in <a href="https://www.scaledfoundations.ai/product/grid" target="_blank">GRID</a>. You can specify any arbitary timed requirements using STL and the nominal path will be modified to satisfy it which can aid data generation for training VLAs over complex long horizon tasks.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Signal Temporal Logic (STL) offers a concise
-            yet expressive framework for specifying and reasoning about
-            spatio-temporal behaviors of robotic systems. Attractively, STL
-            admits the notion of robustness, the degree to which an input
-            signal satisfies or violates an STL specification, thus providing
-            a nuanced evaluation of system performance. Notably, the
-            differentiability of STL robustness enables direct integration
-            to robotics workflows that rely on gradient-based optimization,
-            such as trajectory optimization and deep learning. However,
-            existing approaches to evaluating and differentiating STL
-            robustness rely on recurrent computations, which become
-            inefficient with longer sequences, limiting their use in time-
-            sensitive applications. In this paper, we present STLCG++,
-            a masking-based approach that parallelizes STL robustness
-            evaluation and backpropagation across timesteps, achieving
-            more than 1000× faster computation time than the recurrent
-            approach (STLCG). We also introduce a smoothing technique for
-            differentiability through time interval bounds, expanding STL’s
-            applicability in gradient-based optimization tasks over spatial
-            and temporal variables. Finally, we demonstrate STLCG++’s
-            benefits through three robotics use cases and provide open-
-            source Python libraries in JAX and PyTorch for seamless
-            integration into modern robotics workflows.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/hero.png" alt="MY ALT TEXT"/>
+  <!-- Teaser Video Section -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/videos/output.mp4" type="video/mp4">
+        </video>
         <h2 class="subtitle has-text-centered">
-          STLCG++ masking v/s STLCG recurrent
+          Efficient path replanning for satisfying STL requirements using STLCG++ in <a href="https://www.scaledfoundations.ai/product/grid" target="_blank">GRID</a>. You can specify any arbitrary timed requirements using STL and the nominal path will be modified to satisfy it, aiding data generation for training VLAs over complex long-horizon tasks. Try out our hands on <a ref=https://grid.scaledfoundations.ai/shared/0c1a5a9d-0556-4f93-a36f-fde4cffd3592>demo</a> using jax here!
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/trajectory_gradient_step.gif" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Trajectory optimisation with STL constraints and relaxed time intervals
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/parametric_STL.gif" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Parametric STL learning from data
-       </h2>
-     </div>
-     <!-- <div class="item"> -->
-      <!-- Your image here -->
-      <!-- <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div> -->
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+    </div>
+  </section>
 
-
-
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container"> -->
-      <!-- Paper video. -->
-      <!-- <h2 class="title is-3">Video Presentation</h2>
+  <!-- Paper Abstract Section -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video"> -->
-            <!-- Youtube embed code here -->
-            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Signal Temporal Logic (STL) offers a concise yet expressive framework for specifying and reasoning about spatio-temporal behaviors of robotic systems. Attractively, STL admits the notion of robustness—the degree to which an input signal satisfies or violates an STL specification—thus providing a nuanced evaluation of system performance. Notably, the differentiability of STL robustness enables direct integration into robotics workflows that rely on gradient-based optimization, such as trajectory optimization and deep learning. However, existing approaches to evaluating and differentiating STL robustness rely on recurrent computations, which become inefficient with longer sequences, limiting their use in time-sensitive applications. In this paper, we present STLCG++, a masking-based approach that parallelizes STL robustness evaluation and backpropagation across timesteps, achieving more than 1000× faster computation time than the recurrent approach (STLCG). We also introduce a smoothing technique for differentiability through time interval bounds, expanding STL’s applicability in gradient-based optimization tasks over spatial and temporal variables. Finally, we demonstrate STLCG++’s benefits through three robotics use cases and provide open-source Python libraries in JAX and PyTorch for seamless integration into modern robotics workflows.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section> -->
-<!-- End youtube video -->
+  </section>
 
-
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/parametric_STL.gif"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/trajectory_gradient_step.gif"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
-            <!-- Your video file here -->
-            <!-- <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+  <!-- Image Carousel Section -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/hero.png" alt="STLCG++ masking v/s STLCG recurrent"/>
+            <h2 class="subtitle has-text-centered">STLCG++ masking v/s STLCG recurrent</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/trajectory_gradient_step.gif" alt="Trajectory optimisation with STL constraints"/>
+            <h2 class="subtitle has-text-centered">Trajectory optimisation with STL constraints and relaxed time intervals</h2>
+          </div>
+          <div class="item">
+            <img src="static/images/parametric_STL.gif" alt="Parametric STL learning from data"/>
+            <h2 class="subtitle has-text-centered">Parametric STL learning from data</h2>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section> -->
-<!-- End video carousel -->
+  </section> -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
+  <!-- Blog Post / Tech Release Section -->
+  <section class="section" id="blog-post">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h1 class="title">STLCG++: Advancing Neuro-Symbolic Reasoning in Robotics with Differentiable Signal Temporal Logic</h1>
+      <p>
+        In modern robotics and deep learning, safe behavior generation is essential for deployment. 
+        <strong>Signal Temporal Logic (STL)</strong> is a powerful tool for defining and reasoning about the 
+        spatio-temporal behavior of dynamic systems, particularly in robotics. It enables precise 
+        specification of requirements such as:
+      </p>
+    <br>
+      <p style="border-left: 4px solid #333; padding-left: 10px; font-style: italic; text-align: center;">
+        “A drone must enter a designated region within 10 seconds and remain there for at least 5 seconds.”
+      </p>
+      
+      <br>
+      
+      <p>
+        More importantly, STL provides <em>quantitative robustness metrics</em>, allowing optimization-based methods 
+        to evaluate how well a system adheres to given specifications. As such, we have seen a growing interest in 
+        the inclusion of STL objectives and constraints in various optimization-based robotics problems such as: trajectory optimization, reinforcement learning, and control synthesis.     However, existing approaches to STL evaluation and differentiation often suffer from computational inefficiencies. 
+        Many rely on <strong>recurrent operations</strong>, which scale poorly for long time horizons and limit real-time applications. 
+        This bottleneck prevents widespread adoption in machine learning and robotics pipelines that require fast and 
+        scalable optimization.
+      </p>
+      
+      <br>
+      
+      <p>
+        <strong>Enter STLCG++</strong>, a new <strong>masking-based approach</strong> that eliminates the inefficiencies of recurrent processing. 
+        Inspired by <em>attention mechanisms</em> in transformer models, STLCG++ replaces sequential evaluations with a fully 
+        parallelizable operation, dramatically improving computation speed and scalability.
+      </p>
+      <br>
+      <h3>Our approach achieves:</h3>
+      
+      <ul>
+        <li>✅ <strong>1000× faster</strong> STL robustness computation compared to recurrent methods</li>
+        <li>✅ <strong>Efficient backpropagation</strong> for STL-guided trajectory optimization, deep generative modeling and parameter mining</li>
+        <li>✅ <strong>GPU-accelerated performance</strong>, enabling real-time trajectory optimization</li>
+        <li>✅ <strong>Differentiability over time intervals</strong>, opening new possibilities for learning STL parameters</li>
+      </ul>
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
+      <figure>
+        <img src="static/images/hero.png" alt="STLCG++ vs. STLCG: Transitioning from sequential recurrent processing to parallelized masking operations.">
+        <figcaption>STLCG++ vs. STLCG: Transitioning from sequential recurrent processing to parallelized masking operations.</figcaption>
+      </figure>
+      
+      <h2></h2>
+      <h2 style="display: block; font-size: 1.5em; font-weight: bold; color: #333; margin-top: 20px;">
+        The Masking Approach: Efficiency and Accuracy Combined
+      </h2>
+      <p>
+      The original STLCG had sequential (and computationally heavy) recurrent computations that limited its adoption.  We overcome this sequential dependency in STLCG++ through an innovative masking strategy, inspired by the self-attention mechanisms in transformer architectures. By converting a one-dimensional signal into a structured multi-dimensional array and applying carefully crafted masks, STLCG++ processes long sequences all at once rather than sequentially. This not only accelerates computation but also preserves the fidelity of gradient information—a critical factor for robust optimization. 
+      
+      
+      <h2 style="display: block; font-size: 1.5em; font-weight: bold; color: #333; margin-top: 20px;">
+        Dramatic Performance Gains on Modern Hardware
+      </h2>
+      
+      <p>
+      STLCG++ achieves significant computational improvements over its recurrent predecessors. In benchmark tests, the masking approach scales gracefully with increasing sequence lengths and shows particularly impressive speed gains on GPU architectures—with some tests demonstrating over 1000× faster evaluations when optimizing across multiple time intervals.
+      </p>
+      <figure>
+        <img src="static/images/timing_test_pytorch.png" alt="Computation Time Comparison: STLCG++ (masking approach) vs. traditional recurrent methods on CPU and GPU.">
+        <figcaption>Computation Time Comparison: STLCG++ (masking approach) vs. traditional recurrent methods on CPU and GPU.</figcaption>
+      </figure>
+      
+      <h2 style="display: block; font-size: 1.5em; font-weight: bold; color: #333; margin-top: 20px;">
+        Differentiable Time Interval Bounds for Enhanced Optimization
+      </h2>
+      
+      <p>
+        A standout feature of STLCG++ is its ability to smoothly approximate time interval bounds through a differentiable mask. This allows optimization not only over control inputs but also over temporal parameters—opening new avenues for specification mining and data-driven model refinement. The smooth mask leverages a sigmoid-based function to provide a gradual transition, which can be finely tuned via a smoothing parameter.
+      </p>
+      <figure>
+        <img src="static/images/parametric_STL.gif" alt="Smooth Mask Visualization: Demonstrating the effect of varying the smoothing parameter on time interval selection.">
+        <figcaption>STL Parameter Mining: Visualizing the optimization landscape for learning time interval bounds..</figcaption>
+      </figure>
+
+      <h2 style="display: block; font-size: 1.5em; font-weight: bold; color: #333; margin-top: 20px;">
+        Real-World Applications: From Trajectory Planning to Deep Generative Modeling
+      </h2>
+      
+      <p>
+       We apply STLCG++ for multiple real-world applications:
+      </p>
+      <ul>
+        <li><strong>Trajectory Planning:</strong> Robots can plan complex trajectories that meet refined spatio-temporal specifications. By optimizing both the control inputs and the time intervals during which certain conditions must hold, robots navigate more reliably and efficiently.</li>
+        <li><strong>Deep Generative Modeling:</strong> Incorporating STL guidance into diffusion models enhances safe behavior generation, enabling the design of policies that consider temporal constraints during the generation process.</li>
+        <li><strong>STL Parameter Mining:</strong> STLCG++ allows the extraction of temporal specifications from noisy data, facilitating automatic discovery of optimal STL parameters.</li>
+      </ul>
+      <figure>
+        <img src="static/images/trajectories.gif" alt="Trajectory Planning with STL: Optimized trajectories navigating target regions efficiently.">
+        <figcaption>Trajectory Planning with STL: Optimized trajectories navigating target regions efficiently.</figcaption>
+      </figure>
+   
+      <h2 style="display: block; font-size: 1.5em; font-weight: bold; color: #333; margin-top: 20px;">
+        Open-Source and Ready for Integration
+      </h2>
+      <p>
+        To ensure that the benefits of STLCG++ are accessible to the community, we have released open-source Python libraries for both <a href="https://github.com/UW-CTRL/stljax" target="_blank">JAX </a> and <a href="https://github.com/UW-CTRL/stlcg-plus-plus">PyTorch</a>. 
+        These libraries integrate seamlessly into modern robotics and deep learning workflows, providing researchers and practitioners with powerful tools to accelerate their projects.
+      </p>
+
     </div>
   </section>
-End paper poster -->
 
-
-<!--BibTex citation -->
+  <!-- BibTeX citation Section -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@misc{kapoor2025stlcgmaskingapproachdifferentiable,
-        title={STLCG++: A Masking Approach for Differentiable Signal Temporal Logic Specification}, 
-        author={Parv Kapoor and Kazuki Mizuta and Eunsuk Kang and Karen Leung},
-        year={2025},
-        eprint={2501.04194},
-        archivePrefix={arXiv},
-        primaryClass={cs.RO},
-        url={https://arxiv.org/abs/2501.04194}, 
-  }</code></pre>
+    title={STLCG++: A Masking Approach for Differentiable Signal Temporal Logic Specification}, 
+    author={Parv Kapoor and Kazuki Mizuta and Eunsuk Kang and Karen Leung},
+    year={2025},
+    eprint={2501.04194},
+    archivePrefix={arXiv},
+    primaryClass={cs.RO},
+    url={https://arxiv.org/abs/2501.04194}, 
+}</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
 
-
+  <!-- Footer -->
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br>
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- Statcounter tracking code (if needed) -->
+  <!-- End of Statcounter Code -->
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
